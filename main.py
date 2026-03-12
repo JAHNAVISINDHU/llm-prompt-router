@@ -9,8 +9,8 @@ from router import process_message, VALID_INTENTS, LOG_FILE
 
 BANNER = """
 ╔══════════════════════════════════════════════════════╗
-║         🤖  LLM-Powered Prompt Router  🤖            ║
-║  Intelligently routes your query to the right expert  ║
+║         🤖  LLM-Powered Prompt Router  🤖           ║
+║  Intelligently routes your query to the right expert ║
 ╚══════════════════════════════════════════════════════╝
 
 Supported expert domains:
