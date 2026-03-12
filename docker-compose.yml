@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  router:
+    build: .
+    image: prompt-router:latest
+    container_name: prompt-router
+    stdin_open: true   # keep STDIN open for interactive mode
+    tty: true          # allocate a pseudo-TTY
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ./logs:/app/logs   # persist log file on the host
+
+  test:
+    build: .
+    image: prompt-router:latest
+    container_name: prompt-router-test
+    environment:
+      - OPENAI_API_KEY=sk-test-dummy
+    command: ["pytest", "test_router.py", "-v", "--tb=short"]
