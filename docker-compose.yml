@@ -5,12 +5,12 @@ services:
     build: .
     image: prompt-router:latest
     container_name: prompt-router
-    stdin_open: true   # keep STDIN open for interactive mode
-    tty: true          # allocate a pseudo-TTY
+    stdin_open: true   
+    tty: true          
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
     volumes:
-      - ./logs:/app/logs   # persist log file on the host
+      - ./logs:/app/logs   
 
   test:
     build: .
