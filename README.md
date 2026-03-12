@@ -67,7 +67,7 @@ cp .env.example .env
 
 Then load it into your shell:
 ```bash
-export OPENAI_API_KEY="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"      # Linux / macOS
+export OPENAI_API_KEY="sk-your-openai-api-key-here"      # Linux / macOS
 # set OPENAI_API_KEY=sk-your-key-here         # Windows CMD
 # $env:OPENAI_API_KEY="sk-your-key-here"      # Windows PowerShell
 ```
@@ -89,7 +89,7 @@ docker build -t prompt-router .
 #### 2. Run interactively
 ```bash
 docker run -it \
-  -e OPENAI_API_KEY="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" \
+  -e OPENAI_API_KEY="sk-your-openai-api-key-here" \
   -v "$(pwd)/logs:/app/logs" \
   prompt-router
 ```
