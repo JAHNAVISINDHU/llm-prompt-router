@@ -89,7 +89,7 @@ docker build -t prompt-router .
 #### 2. Run interactively
 ```bash
 docker run -it \
-  -e OPENAI_API_KEY="sk-your-key-here" \
+  -e OPENAI_API_KEY="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" \
   -v "$(pwd)/logs:/app/logs" \
   prompt-router
 ```
